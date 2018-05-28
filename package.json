@@ -1,0 +1,13 @@
+{
+  "name": "electron-live2d-asuna",
+  "version": "1.0.0",
+  "description": "A minimal Electron application with live2d",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "skyrim894",
+  "devDependencies": {
+    "electron": "^2.0.2"
+  }
+}

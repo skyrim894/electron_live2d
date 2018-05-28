@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <style type="text/css">
+        html,body{
+            width: 260px;
+            height:350px;
+        }
+
+        .waifu {
+            padding:0;
+            z-index: 1;
+            font-size: 0;
+            margin-top:50px;
+            transition: all .3s ease-in-out;
+            -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+            /* border:2px solid #333; */
+        }
+        .waifu:hover {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+        
+        .waifu #live2d{
+            position: relative;
+        }
+
+        #move{
+            -webkit-app-region: drag;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 26px;
+            height: 26px;
+            background: url("resources/img/move_hover.png") no-repeat;
+            opacity: 0;
+            -webkit-transition:0.5s;
+        }
+
+        #next_texture{
+            position: absolute;
+            z-index: 10;
+            top: 30px;
+            left: 0;
+            width: 26px;
+            height: 26px;
+            border:none;
+            background: url("resources/img/run_hover.png") no-repeat;    
+            opacity: 0;
+            -webkit-transition:0.5s;
+        }
+
+        html:hover #next_texture,html:hover #move{
+            opacity: 1;
+            -webkit-transition:0.5s;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="move"></div>
+    <input type="button" id="next_texture"/>
+<div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" width="250" height="350" class="live2d"></canvas>
+</div>
+<script src="resources/js/live2d.js"></script>
+<script src="resources/js/jquery.min.js"></script>
+<script src="resources/js/index.js"></script>
+</body>
+</html>
