@@ -1,16 +1,17 @@
 if (typeof module === 'object') {window.jQuery = window.$ = module.exports;};
 $(function(){
     
-    var size = 18;
+    var size = 1;//为了减少体积，只上传了一套贴图
     var count = 1;
     
     console.log( $("#next_texture"));
 
     $("#next_texture").click(function(){    
-        if(count==size){
+        count++;
+        
+        if(count>=size){
             count = 1;
         }
-        count++;
         
         if(count<10){
             count = "0"+count;
